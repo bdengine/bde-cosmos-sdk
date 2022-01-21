@@ -1,14 +1,18 @@
 package testutil
 
 import (
+	"context"
+	"errors"
 	"fmt"
 	"strings"
 
 	tmcli "github.com/tendermint/tendermint/libs/cli"
+	"google.golang.org/grpc"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
+	srvconfig "github.com/cosmos/cosmos-sdk/server/config"
 	"github.com/cosmos/cosmos-sdk/testutil"
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"
 	"github.com/cosmos/cosmos-sdk/x/auth/client/cli"
@@ -113,6 +117,14 @@ func TxAuxToFeeExec(clientCtx client.Context, filename string, extraArgs ...stri
 	}
 
 	return clitestutil.ExecTestCLICmd(clientCtx, cli.GetAuxToFeeCommand(), append(args, extraArgs...))
+}
+
+func ClientConnFromAppConfig(ctx context.Context, cfg *srvconfig.Config) (grpc.ClientConnInterface, error) {
+	if !cfg.GRPC.Enable {
+		return nil, errors.New("grpc not enabled")
+	}
+
+	return grpc.DialContext(ctx, cfg.GRPC.Address, grpc.WithInsecure(), grpc.WithReturnConnectionError())
 }
 
 // DONTCOVER

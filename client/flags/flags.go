@@ -46,6 +46,7 @@ const (
 	FlagUseLedger        = "ledger"
 	FlagChainID          = "chain-id"
 	FlagNode             = "node"
+	FlagGRPC             = "grpc"
 	FlagHeight           = "height"
 	FlagGasAdjustment    = "gas-adjustment"
 	FlagFrom             = "from"
@@ -91,6 +92,7 @@ var LineBreak = &cobra.Command{Run: func(*cobra.Command, []string) {}}
 // AddQueryFlagsToCmd adds common flags to a module query command.
 func AddQueryFlagsToCmd(cmd *cobra.Command) {
 	cmd.Flags().String(FlagNode, "tcp://localhost:26657", "<host>:<port> to Tendermint RPC interface for this chain")
+	cmd.Flags().String(FlagGRPC, "localhost:9090", "<host>:<port> to GRPC interface for this chain")
 	cmd.Flags().Int64(FlagHeight, 0, "Use a specific height to query state at (this can error if the node is pruning state)")
 	cmd.Flags().StringP(tmcli.OutputFlag, "o", "text", "Output format (text|json)")
 
@@ -108,6 +110,7 @@ func AddTxFlagsToCmd(cmd *cobra.Command) {
 	cmd.Flags().String(FlagFees, "", "Fees to pay along with transaction; eg: 10uatom")
 	cmd.Flags().String(FlagGasPrices, "", "Gas prices in decimal format to determine the transaction fee (e.g. 0.1uatom)")
 	cmd.Flags().String(FlagNode, "tcp://localhost:26657", "<host>:<port> to tendermint rpc interface for this chain")
+	cmd.Flags().String(FlagGRPC, "localhost:9090", "<host>:<port> to GRPC interface for this chain")
 	cmd.Flags().Bool(FlagUseLedger, false, "Use a connected Ledger device")
 	cmd.Flags().Float64(FlagGasAdjustment, DefaultGasAdjustment, "adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored ")
 	cmd.Flags().StringP(FlagBroadcastMode, "b", BroadcastSync, "Transaction broadcasting mode (sync|async|block)")
