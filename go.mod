@@ -11,7 +11,7 @@ require (
 	github.com/coinbase/rosetta-sdk-go v0.7.2
 	github.com/confio/ics23/go v0.6.6
 	github.com/cosmos/btcutil v1.0.4
-	github.com/cosmos/cosmos-proto v1.0.0-alpha6
+	github.com/cosmos/cosmos-proto v1.0.0-beta.4
 	github.com/cosmos/cosmos-sdk/db v0.0.0
 	github.com/cosmos/cosmos-sdk/errors v1.0.0-beta.2
 	github.com/cosmos/go-bip39 v1.0.0
@@ -43,7 +43,7 @@ require (
 	github.com/spf13/cobra v1.3.0
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.10.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.8.4
 	github.com/tendermint/btcd v0.1.1
 	github.com/tendermint/crypto v0.0.0-20191022145703-50d29ede1e15
 	github.com/tendermint/go-amino v0.16.0
@@ -52,8 +52,8 @@ require (
 	golang.org/x/crypto v0.0.0-20211215165025-cf75a172585e
 	google.golang.org/genproto v0.0.0-20211208223120-3a66f561d7aa
 	google.golang.org/grpc v1.43.0
-	google.golang.org/protobuf v1.27.1
-	pgregory.net/rapid v0.4.7
+	google.golang.org/protobuf v1.32.0
+	pgregory.net/rapid v1.1.0
 	sigs.k8s.io/yaml v1.3.0
 )
 
@@ -140,7 +140,7 @@ require (
 	google.golang.org/appengine v1.6.7 // indirect
 	gopkg.in/ini.v1 v1.66.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 	nhooyr.io/websocket v1.8.6 // indirect
 )
 
