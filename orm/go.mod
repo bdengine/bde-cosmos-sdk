@@ -1,6 +1,6 @@
 module github.com/cosmos/cosmos-sdk/orm
 
-go 1.17
+go 1.23
 
 require (
 	github.com/cosmos/cosmos-proto v1.0.0-alpha6
@@ -10,7 +10,7 @@ require (
 	github.com/tendermint/tm-db v0.6.6
 	google.golang.org/protobuf v1.27.1
 	gotest.tools/v3 v3.1.0
-	pgregory.net/rapid v0.4.7
+	pgregory.net/rapid v1.3.0
 )
 
 require (
