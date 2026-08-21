@@ -8,10 +8,9 @@ require (
 	github.com/hashicorp/go-getter v1.5.11
 	github.com/otiai10/copy v1.7.0
 	github.com/rs/zerolog v1.26.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.12.1
 	google.golang.org/api v0.44.0 // indirect
 	google.golang.org/genproto v0.0.0-20210828152312-66f60bf46e71 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
 
 require (
@@ -85,7 +84,6 @@ require (
 	github.com/pelletier/go-toml v1.9.3 // indirect
 	github.com/petermattis/goid v0.0.0-20180202154549-b0b1615b78e5 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/prometheus/client_golang v1.11.0 // indirect
 	github.com/prometheus/client_model v0.2.0 // indirect
 	github.com/prometheus/common v0.29.0 // indirect
@@ -111,6 +109,7 @@ require (
 	github.com/zondax/hid v0.9.0 // indirect
 	go.etcd.io/bbolt v1.3.5 // indirect
 	go.opencensus.io v0.23.0 // indirect
+	go.yaml.in/yaml/v3 v3.0.5 // indirect
 	golang.org/x/crypto v0.0.0-20211215165025-cf75a172585e // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
 	golang.org/x/mod v0.4.2 // indirect
